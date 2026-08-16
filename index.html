@@ -102,11 +102,47 @@ img{display:block;max-width:100%}
   transition:opacity 1.2s ease,transform 6s ease
 }
 .photo-frame.slideshow img.active{opacity:1;transform:scale(1)}
+.intro-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin: 0 auto 22px;
+
+  width: 170px;
+  height: 170px;
+}
+
+.intro-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+
+  filter: drop-shadow(0 5px 12px rgba(120, 65, 80, .12));
+}
 .names{
-  font:500 clamp(52px,9vw,100px)/.86 "Cormorant Garamond",serif;
+  font:400 clamp(52px,9vw,100px)/.86 "Cormorant Garamond",serif;
   margin:15px 0 10px;color:#714650
 }
-.names .and{color:var(--rose);font-style:italic;font-size:.55em}
+.names .and{  display: flex;
+    justify-content: center;
+    align-items: baseline;
+    gap: 15px;
+    white-space: nowrap;}
+    .namesLogo {
+  font: 500 clamp(45px, 8vw, 90px) / .9
+    "Cormorant Garamond", serif;
+
+  margin: 20px 0 8px;
+
+  white-space: nowrap;
+}
+
+.namesLogo .and {
+  color: var(--rose);
+  font-style: italic;
+  font-size: .6em;
+}
 .invite-line{font:italic 18px "Playfair Display",serif;color:var(--muted)}
 .date{font:600 15px Montserrat,sans-serif;letter-spacing:3px;margin:18px 0;color:var(--rose-dark)}
 .hero-ornament{
@@ -278,11 +314,12 @@ section>.container{position:relative;z-index:1}
 
   font-size: clamp(24px, 3.5vw, 38px);
 
-  font-weight: 500;
+  font-weight: 600;
 
   line-height: 1.15;
 
-  margin-bottom: 20px;
+  margin-bottom: 10px;
+  margin-top: 10px;
 }
 
 
@@ -445,77 +482,84 @@ section>.container{position:relative;z-index:1}
 /* ---------------------------------------------------------
    DATE + TIME
 --------------------------------------------------------- */
-
-.wedding-info {
-
-  display: flex;
-
-  align-items: center;
-
-  justify-content: center;
-
-  gap: 22px;
-
-  margin-top: 25px;
+.info-date {
+    display: inline-block;
+    text-align: center;
+    color: var(--rose-dark);
+    font-family: "Cormorant Garamond", serif;
+    margin: 25px auto;
 }
 
-
-.info-item {
-
-  color: #9b4f61;
-
-  font-family: Montserrat, sans-serif;
-
-  font-size: 13px;
-
-  font-weight: 600;
-
-  letter-spacing: 3px;
-
+/* SEPTEMBER */
+.date-month {
+    display: block;
+    font-family: "Montserrat", sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid rgba(120, 70, 80, .5);
 }
 
+/* SUNDAY - 06 - 3:30 PM */
+.date-middle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
 
-.info-separator {
-
-  color: #c98591;
-
-  font-size: 10px;
+    border-bottom: 1px solid rgba(120, 70, 80, .5);
+    padding: 2px 8px;
 }
 
+.date-day {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 18px;
+    font-weight: 600;
+}
 
+.date-number {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 52px;
+    line-height: .9;
+    font-weight: 500;
+}
+
+.date-time {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 19px;
+    font-weight: 600;
+}
+
+/* 2026 */
+.date-year {
+    display: block;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 20px;
+    letter-spacing: 2px;
+    margin-top: 2px;
+}
 /* ---------------------------------------------------------
    VENUE
 --------------------------------------------------------- */
 
 .venue {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
 
-  margin-top: 25px;
+    white-space: nowrap;
 
-  color: #74545c;
-
-  font-family: Montserrat, sans-serif;
-
-  font-size: 12px;
-
-  font-weight: 500;
-
-  letter-spacing: 2px;
-
-  text-transform: uppercase;
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    letter-spacing: 2px;
+    text-transform: uppercase;
 }
 
-
 .venue-icon {
-
-  color: #c77b89;
-
-  margin: 0 10px;
-
-  font-family:
-    "Cormorant Garamond",
-    serif;
-
-  font-size: 18px;
+    flex-shrink: 0;
+    color: var(--rose);
 }
 
 
@@ -816,7 +860,7 @@ section>.container{position:relative;z-index:1}
   background:radial-gradient(circle at 10% 25%,rgba(221,165,174,.18),transparent 25%),#fff4f4;color:#68454d
 }
 .verse-section:before{content:"“";left:4%;top:-60px;color:var(--rose);opacity:.10;font:300 260px "Cormorant Garamond"}
-.verse{font:500 clamp(23px,4vw,34px)/2.1 "Noto Naskh Arabic",serif;direction:rtl;max-width:850px;margin:auto}
+.verse{ font-family: "Cormorant Garamond", serif;max-width:850px;margin:auto}
 .reference{font:italic 17px "Cormorant Garamond",serif;margin-top:15px;color:var(--rose-dark)}
 
 .details-section{background:radial-gradient(circle at 5% 20%,rgba(235,190,198,.20),transparent 22%),#faf0eb}
@@ -931,7 +975,7 @@ footer{text-align:center;padding:35px 20px;background:linear-gradient(135deg,#96
   .detail-grid{grid-template-columns:1fr}
   .story{grid-template-columns:1fr;gap:30px}
   .story-photo{height:400px}
-  .attendance-options{flex-direction:column}
+  .attendance-options{flex-direction:row}
    .reception .detail-grid {
         flex-direction: column;
         align-items: center;
@@ -957,11 +1001,37 @@ footer{text-align:center;padding:35px 20px;background:linear-gradient(135deg,#96
   .photo-frame{height:160px;padding:3px;border-radius:14px}
   .photo-frame:before{inset:3px;border-radius:10px}
   .photo-frame.slideshow img{inset:3px;width:calc(100% - 6px);height:calc(100% - 6px);border-radius:10px}
-  .names{font-size:49px}
+    .namesLogo {
+    font-size: 48px;
+    white-space: nowrap;
+    letter-spacing: -1px;
+  }
   .invite-line{font-size:15px}
   .date{font-size:11px;letter-spacing:1.5px}
   .verse{font-size:22px}
   .timer{gap:10px}.time-box{min-width:55px}.number{font-size:38px}
+   .parents {
+        gap: 7px;
+        font-size: 20px;
+    }
+     .names {
+        font-size: 52px;
+        gap: 10px;
+        flex-direction: row;
+    }
+
+    .names .and {
+        font-size: .65em;
+    }
+     .venue {
+        gap: 6px;
+        font-size: 9px;
+        letter-spacing: 1px;
+    }
+
+    .venue-icon {
+        font-size: 10px;
+    }
 }
 @media(max-width:360px){
   .photo-frame{height:140px}
@@ -1010,8 +1080,11 @@ footer{text-align:center;padding:35px 20px;background:linear-gradient(135deg,#96
 </div>
 </div>
 
-<h1 class="names">Mina <span class="and">&</span> Martina</h1>
-<!-- <div class="hero-ornament"></div> -->
+<div class="intro-logo">
+    <img src="images/logo.png" alt="Mina & Martina logo">
+</div>
+<h1 class="namesLogo">Mina <span class="and">&</span> Martina</h1>
+
 <div class="invite-line"></div>
 <div class="date">06 · 09 · 2026</div>
 <a class="open-btn" href="#welcome">Open invitation</a>
@@ -1020,17 +1093,14 @@ footer{text-align:center;padding:35px 20px;background:linear-gradient(135deg,#96
 </div>
 </header>
 
-<!-- <section id="welcome">
+<section class="verse-section">
 <div class="container center">
-<div class="eyebrow">You are invited</div>
-<h2 class="title">Dr. Ebrahim Mouris & Eng. Magued Naguib</h2>
-<div class="line"></div>
-<div class="invite-line">We joyfully invite you to the wedding of our son and daughter</div>
-<h1 class="names">Mina <span class="and">&</span> Martina</h1>
-<div class="date">06 · 09 · 2026 &nbsp; • &nbsp; 3:30 PM</div>
-<div class="date">Diocese of St. Mary and St. Mark October 6</div>
+<div class="verse">“So they are no longer two, but one flesh.
+   Therefore what God has joined together, 
+   let no one separate.”</div>
+<div class="reference">Matthew 19:6</div>
 </div>
-</section> -->
+</section>
 
 <section id="welcome" class="welcome-section">
   <div class="floral floral-top-left">✿</div>
@@ -1039,22 +1109,20 @@ footer{text-align:center;padding:35px 20px;background:linear-gradient(135deg,#96
   <div class="floral floral-bottom-right">✿</div>
 
   <div class="container center welcome-content">
-
+ <div class="invited-line">
+     Together with their families,
+    </div>
+    
     <div class="parents">
       <span>Dr. Ebrahim Mouris</span>
       <span class="parent-divider">&</span>
-      <span>Eng. Magued Naguib</span>
+      <span>Eng. Maged Naguib</span>
     </div>
 
     <div class="invited-line">
-     We joyfully invite you to 
+    joyfully invite you to witness and celebrate the wedding of their beloved son & daughter
     </div>
-
     <div class="mini-flower">❁</div>
-
-    <div class="invite-line">
-      the wedding of our beloved son and daughter
-    </div>
 
     <h1 class="names">
       Mina <span class="and">&</span> Martina
@@ -1062,21 +1130,21 @@ footer{text-align:center;padding:35px 20px;background:linear-gradient(135deg,#96
 
     <div class="name-underline"></div>
 
-    <div class="wedding-info">
-      <div class="info-item">
-        <span class="info-date">06 · 09 · 2026</span>
-      </div>
+   <div class="info-date">
+    <span class="date-month">SEPTEMBER</span>
 
-      <span class="info-date">.</span>
-
-      <div class="info-item">
-        <span class="info-time">3:30 PM</span>
-      </div>
+    <div class="date-middle">
+        <span class="date-day">SUNDAY</span>
+        <span class="date-number">06</span>
+        <span class="date-time">4:30 PM</span>
     </div>
+
+    <span class="date-year">2026</span>
+</div>
 
     <div class="venue">
       <span class="venue-icon">✿</span>
-      Diocese of St. Mary and St. Mark October 6
+      Diocese of st mary and st mark 6 october city
       <span class="venue-icon">✿</span>
     </div>
 
@@ -1084,12 +1152,7 @@ footer{text-align:center;padding:35px 20px;background:linear-gradient(135deg,#96
   </div>
 </section>
 
-<section class="verse-section">
-<div class="container center">
-<div class="verse">«فَرَحٌ وَابْتِهَاجٌ يَكُونُ لَكُمْ، وَيَكُونُ لَكُمْ اسْمٌ حَسَنٌ»</div>
-<div class="reference">— سفر إشعياء 62:5</div>
-</div>
-</section>
+
 
 <section class="details-section">
 <div class="container center">
@@ -1099,7 +1162,7 @@ footer{text-align:center;padding:35px 20px;background:linear-gradient(135deg,#96
 
 <div class="detail-grid">
 <div class="detail"><div class="detail-icon">♡</div><div class="detail-label">Date</div><div class="detail-value">Sunday</div><div class="detail-sub">6 September 2026</div></div>
-<div class="detail"><div class="detail-icon">◷</div><div class="detail-label">Time</div><div class="detail-value">3:30 PM</div><div class="detail-sub">We'd love to see you there</div></div>
+<div class="detail"><div class="detail-icon">◷</div><div class="detail-label">Time</div><div class="detail-value">4:30 PM</div><div class="detail-sub">We'd love to see you there</div></div>
 <div class="detail"><div class="detail-icon">⌖</div><div class="detail-label">Location</div><div class="detail-value">Wedding Ceremony</div><div class="detail-sub">Diocese of St. Mary and St. Mark October 6</div></div>
 </div>
 
