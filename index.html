@@ -862,18 +862,26 @@ section>.container{position:relative;z-index:1}
 .verse-section:before{content:"“";left:4%;top:-60px;color:var(--rose);opacity:.10;font:300 260px "Cormorant Garamond"}
 .verse{ font-family: "Cormorant Garamond", serif;max-width:850px;margin:auto}
 .verse-cross {
-  font-family: "Cormorant Garamond", serif;
-  font-size: 34px;
-  line-height: 1;
-  color: #714650;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-  margin-bottom: 25px;
+  margin: 0 auto 10px;
 
-  text-shadow:
-    0 4px 12px rgba(113, 70, 80, 0.12);
+  width: 100px;
+  height: 100px;
+}
 
-  position: relative;
-  z-index: 1;
+.verse-cross img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: contain;
+
+  display: block;
+
+  /* same wedding rose color feel */
+  filter: drop-shadow(0 4px 10px rgba(113, 70, 80, 0.12));
 }
 .reference{font:italic 17px "Cormorant Garamond",serif;margin-top:15px;color:var(--rose-dark)}
 
@@ -979,7 +987,7 @@ button:disabled{opacity:.65;cursor:not-allowed;transform:none}
 footer{text-align:center;padding:35px 20px;background:linear-gradient(135deg,#965363,#b96d7d);color:#fff7f8;font:italic 23px "Cormorant Garamond",serif}
 
 @media(max-width:700px){
-  section{padding:70px 0}
+  section{padding:30px 0}
   .hero-card{padding:30px 15px;border-radius:45% 45% 48% 48%/36% 36% 55% 55%}
   .photos{gap:7px}
   .photo-person:nth-child(2){transform:translateY(-12px)}
@@ -1109,11 +1117,13 @@ footer{text-align:center;padding:35px 20px;background:linear-gradient(135deg,#96
 
 <section class="verse-section">
 <div class="container center">
-    <div class="verse-cross">✝</div>
-<div class="verse">“So they are no longer two, but one flesh.
-   Therefore what God has joined together, 
-   let no one separate.”</div>
-<div class="reference">Matthew 19:6</div>
+    <div class="verse-cross">
+    <img src="images/cross.png" >
+  </div>
+  <div class="verse">“So they are no longer two, but one flesh.
+    Therefore what God has joined together, 
+    let no one separate.”</div>
+  <div class="reference">Matthew 19:6</div>
 </div>
 </section>
 
